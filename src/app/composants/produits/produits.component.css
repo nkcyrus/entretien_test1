@@ -1,0 +1,59 @@
+
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.customer-header{
+    display: flex;
+}
+
+.customer-header .image-block img{
+    height: 50px;
+    vertical-align: center;
+    margin-right: 20px;
+}
+
+.satisfied-customers{
+    display: flex;
+    justify-content: space-around;
+}
+
+.customer-comment{
+    text-align: justify;
+    width: 250px;
+}
+
+.customer-header{
+    margin-bottom: 20px;
+}
+
+.satisfied-customers__1,
+.satisfied-customers__2,
+.satisfied-customers__3{
+    background-color: rgb(80, 7, 80);
+    border-radius: 12px;
+    color:white;
+    padding: 30px 20px;
+    margin-right: 20px;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.status{
+    color:orange;
+}
+
+.satisfied-customers__2{
+    transform: translateY(30px);
+}
+
+.satisfied-customers__3{
+    transform: translateY(60px);
+}

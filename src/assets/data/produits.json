@@ -1,0 +1,14 @@
+[{
+    "id":1,
+    "nom_produit":"Moto Honda",
+    "description":"Moteur puissant",
+    "img_produit":"moto.jpeg",
+    "prix_produit":1000000
+},
+{
+    "id":2,
+    "nom_produit":"Vélo",
+    "description":"VTT",
+    "img_produit":"vélo.jpeg",
+    "prix_produit":100000
+}]

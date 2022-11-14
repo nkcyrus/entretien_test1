@@ -1,0 +1,120 @@
+<header>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="language">
+                    <h1>Liste des produits</h1>
+                </div>
+            </div>
+            <div class="col-md-8 text-right">
+                <div class="menu-social">
+                    <ul>
+                        <button href="javascript:void(0);">
+                            Ajouter un produit
+                        </button>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <div class="col-md-4">
+            <div class="language">
+                <h1>Liste des produits</h1>
+            </div>
+        </div>
+
+        <!-- Topbar Navbar -->
+        <ul class="navbar-nav ml-auto">
+
+          <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+          <li class="nav-item dropdown no-arrow d-sm-none">
+            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-search fa-fw"></i>
+            </a>
+           
+          </li>
+
+          
+          <li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" href="preinscription.php" role="button">
+              <span class="mr-2 d-none d-lg-inline text-gray-600 small">Ajouter produit</span>
+              <i class="fas fa-user-plus fa-fw"></i>
+            </a>
+          </li>
+          
+
+        </ul>
+
+      </nav>
+</header>
+<div class="container-fluid">
+    <!-- <div class="img-container">
+        <img src="" alt="">
+    </div>
+    <div class="product-name">
+
+    </div>
+    <div class="satisfied-customers" *ngFor="let item of list_produits">
+        <div class="satisfied-customers__1">
+            <div class="customer-header">
+                <div class="image-block">
+                    <img src="/assets/images/{{item.img_produit}}" alt="">
+                </div>
+                <div class="second-block">
+                    <h3>{{item.nom_produit}}</h3>
+                    <p class="status">{{item.prix_produit}} FCFA</p>
+                </div>
+            </div>
+            <p class="customer-comment">
+                {{item.description}}
+            </p>
+        </div>
+    </div> -->
+        
+    <div class="row">
+      
+     
+          <div class="col-xl-3 col-md-6 mb-4" *ngFor="let item of list_produits" >
+          
+            <div class="card shadow h-100 py-2" style="background:light">
+            <a class="nav-link" role="button" routerLink="/details" [queryParams]="{produit: item.id}">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col mr-2" style="height:150px;">
+                    <img src="/assets/images/{{item.img_produit}}" alt="" style="height:100%; width:100%;">
+                  </div>
+                </div>
+                <div class="row ">                    
+                    <span class="text-center"></span>
+                </div>
+                <div class="row ">                    
+                    <span class="text-center">{{item.nom_produit}}</span>
+                </div>
+                <div class="row text-center font-weight-bold text-dark">
+                  <span class="">{{item.prix_produit}} FCFA</span>
+                </div>
+            </div>
+            </a>
+                <div class="row ">
+                    <a class="nav-link"  role="button">
+                      Modifier
+                    </a>  
+                    <div class="col text-md-right">
+                    <button  (click)="deleteproduct(item.id)">
+                      <!-- <i class="fas fa-trash fa-2x text-danger  bg-white"></i> -->
+                      Supprimer
+                    </button>
+                    </div>               
+                    
+                  </div>
+              
+        
+            </div>
+            
+          </div>
+        
+       
+        
+        </div>
+</div>
